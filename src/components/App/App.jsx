@@ -61,17 +61,15 @@ export class App extends React.Component {
   };
 
   //не робити стрілкою
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_, prevState) {
    // console.log('App componentDidUpdate');
    //масиви порівнюємо за писиланням: видаляю, додаю контакт
     if (this.state.contacts !== prevState.contacts) {
      // console.log('Update contacts')
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }  
-    console.log(prevProps)
-    console.log(prevState)
-    console.log(this.state)
-    
+    //console.log(prevState)
+    //console.log(this.state)  
   };
 
   componentDidMount() {
@@ -99,7 +97,7 @@ export class App extends React.Component {
 
 
 Notify.init({
-width: '500px',
+width: '450px',
 fontSize: '20px',
 position: 'center-top',
 closeButton: false,
