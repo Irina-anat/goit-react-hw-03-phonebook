@@ -44,8 +44,8 @@ class ContactForm extends React.Component{
         <input 
     type="text"
     name="name"
-    pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" 
-    title="Name may contain only  letters, spaces, hyphens, and apostrophes are allowed"
+    pattern="^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ']+( [A-Za-zА-Яа-яЁёІіЇїЄєҐґ']+)?" 
+    title="Enter last name or first name or both last name and first name"
     required
         value={name}
         onChange={this.handleChange}
