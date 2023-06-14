@@ -27,7 +27,7 @@ export class App extends React.Component {
     contact =>
       (contact.name.toLowerCase() === lowerCaseName && contact.number === number) || contact.number === number || contact.name.toLowerCase() === lowerCaseName)
 
-  ?  Notify.warning('Contact with that name or number is already present in the phone book.')
+  ?  Notify.warning(`Contact with that ${name} or ${number} is already present in the phone book.`)
  
   : this.setState(prevState => ({
     contacts: [contact, ...prevState.contacts],

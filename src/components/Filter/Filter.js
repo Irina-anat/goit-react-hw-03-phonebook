@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 const Filter = ({ value, onChange }) => {
     return (
         <label>
-            Find contacts by Name
-            <input type='text' value={value} onChange={onChange} />
+            <input type='text' placeholder="Find contacts by Name" value={value} onChange={onChange} />
         </label>
     );
 };
@@ -13,7 +12,7 @@ const Filter = ({ value, onChange }) => {
 Filter.propTypes = {
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-}
+};
 
 export default Filter;
 
